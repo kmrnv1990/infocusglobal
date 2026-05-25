@@ -338,10 +338,15 @@ function Contact() {
         </div>
       </div>
 
-      <form className="contactForm" action={`https://formsubmit.co/${email}`} method="POST">
-        <input type="hidden" name="_subject" value="New Website Enquiry - Infocus Global Technologies" />
-        <input type="hidden" name="_captcha" value="false" />
-        <input type="hidden" name="_template" value="table" />
+      <form
+  className="contactForm"
+  action={`https://formsubmit.co/${email}`}
+  method="POST"
+>
+  <input type="hidden" name="_captcha" value="false" />
+  <input type="hidden" name="_template" value="table" />
+  <input type="hidden" name="_subject" value="New Infocus Global Website Lead" />
+  <input type="hidden" name="_next" value="https://infocusglobal.vercel.app/" />
         <input name="name" required placeholder="Full Name" />
         <input type="email" name="email" required placeholder="Business Email" />
         <input name="company" placeholder="Company Name" />
