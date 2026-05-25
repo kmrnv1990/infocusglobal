@@ -369,22 +369,114 @@ ${message}`
         </div>
       </div>
 
-      <form className="contactForm" onSubmit={handleSubmit}>
-        <input name="name" required placeholder="Full Name" />
-        <input type="email" name="email" required placeholder="Business Email" />
-        <input name="company" placeholder="Company Name" />
-        <select name="service" required defaultValue="">
-          <option value="" disabled>Service Interested In</option>
-          <option>Managed IT Operations</option>
-          <option>Microsoft 365 & Cloud</option>
-          <option>Cybersecurity</option>
-          <option>Infrastructure & Networking</option>
-          <option>Global Remote Support</option>
-          <option>Device Lifecycle & Procurement</option>
-        </select>
-        <textarea name="message" rows="6" required placeholder="Tell us about your requirement" />
-        <button className="primaryBtn full" type="submit">Send Email Enquiry</button>
-      </form>
+      <form
+  className="contactForm"
+  action="https://api.web3forms.com/submit"
+  method="POST"
+>
+  <input
+    type="hidden"
+    name="access_key"
+    value="c1729b98-79a7-4a08-b6e1-dac495d20157"
+  />
+
+  <input
+    type="hidden"
+    name="subject"
+    value="New Infocus Global Website Lead"
+  />
+
+  <input
+    type="hidden"
+    name="from_name"
+    value="Infocus Global Technologies"
+  />
+
+  <input
+    type="hidden"
+    name="redirect"
+    value="https://infocusglobal.vercel.app/"
+  />
+
+  <input
+    type="hidden"
+    name="replyto"
+    value="sales@infocusglobaltech.com"
+  />
+
+  <input
+    type="checkbox"
+    name="botcheck"
+    className="hidden"
+    style={{ display: "none" }}
+  />
+
+  <input
+    name="name"
+    required
+    placeholder="Full Name"
+  />
+
+  <input
+    type="email"
+    name="email"
+    required
+    placeholder="Business Email"
+  />
+
+  <input
+    name="company"
+    placeholder="Company Name"
+  />
+
+  <select
+    name="service"
+    required
+    defaultValue=""
+  >
+    <option value="" disabled>
+      Service Interested In
+    </option>
+
+    <option>
+      Managed IT Operations
+    </option>
+
+    <option>
+      Microsoft 365 & Cloud
+    </option>
+
+    <option>
+      Cybersecurity
+    </option>
+
+    <option>
+      Infrastructure & Networking
+    </option>
+
+    <option>
+      Global Remote Support
+    </option>
+
+    <option>
+      Device Lifecycle & Procurement
+    </option>
+  </select>
+
+  <textarea
+    name="message"
+    rows="6"
+    required
+    placeholder="Tell us about your requirement"
+  />
+
+  <button
+    className="primaryBtn full"
+    type="submit"
+  >
+    Submit Enquiry
+  </button>
+</form>
     </main>
   );
 }
